@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+<servlet>
+	<servlet-name>BgColor</servlet-name>
+        <servlet-class>BgColor</servlet-class>
+             	
+	<init-param>
+		<param-name>color</param-name>
+		<param-value>blue</param-value>
+	</init-param>
+			
+</servlet>
+<servlet-mapping>
+	<servlet-name>BgColor</servlet-name>
+	<url-pattern>/BgColor</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>check</servlet-name>
+	<servlet-class>Login</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>check</servlet-name>
+	<url-pattern>/auth</url-pattern>
+</servlet-mapping>
+
+<context-param>
+	<param-name>user</param-name>
+	<param-value>admin</param-value>
+</context-param>
+<context-param>
+	<param-name>ps</param-name>
+	<param-value>admin</param-value>
+</context-param>
+
+</web-app>
