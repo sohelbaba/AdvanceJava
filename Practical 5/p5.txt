@@ -1,0 +1,104 @@
+-- function -----
+create or replace function grettings (msg in varchar) return varchar as
+begin
+ return msg;
+end;
+
+output
+begin
+ dbms_output.put_line(grettings('Hello Good Morning'));
+end;
+
+----1----
+create or replace function calavgsal (eno in number) 
+return number as
+avgsal number := 0;
+begin
+  select avg(salary) into avgsal from employee where deptno = eno group by deptno;
+  return avgsal;
+end;
+
+declare
+empno number;
+begin 
+ empno := :empno;
+ dbms_output.put_line(calavgsal(102));
+end;
+
+-----2------
+create or replace function int_val(amount in number,rate in number,time in number ,interest in varchar) return number as
+begin
+  case interest 
+     when 'simple' then  return (amount * rate * time)/100;
+     when 'compound' then  return  amount * Power (1 + ( rate / 100 ),time);
+  end case;
+end;
+
+declare
+amount number;
+rate number;
+time number;
+inttype varchar;
+begin
+ amount := :amount;
+ rate := :rate;
+ time := :time;
+ inttype := :inttype;
+ dbms_output.put_line(int_val(33000,7,6,'simple'));
+end;
+
+-----3-------
+create or replace function cal_exp(eno in number) return number as
+year number := 0;
+today number :=0;
+begin
+ select extract(year from hire_date) into year from employee where empno = eno; 
+ select extract(year from sysdate) into today from dual;
+ return today - year;
+end;
+
+declare 
+empno number;
+begin
+ empno := :empno;
+ dbms_output.put_line('Year of Experience ' || cal_exp(empno));
+end;
+
+---4----
+create or replace function prime(no in number) return varchar as
+begin
+ for i in 2..no loop
+   if mod(no,i) = 0 then
+      return 'false';
+   else 
+      return 'true';
+   end if;
+ end loop;
+end;
+
+declare 
+ no number;
+begin
+ no := :no;
+ dbms_output.put_line(prime(no));
+end;
+
+
+--- 5 ----
+create or replace function palindrom(str in varchar) return varchar as
+rev varchar(10);
+begin
+  select reverse(str) into rev from dual;
+  if str = rev then
+  return 'true';
+ else
+  return 'false';
+ end if;
+end;
+
+declare 
+ input varchar(50);
+begin
+ input := :input;
+ dbms_output.put_line(palindrom(input));
+end;
