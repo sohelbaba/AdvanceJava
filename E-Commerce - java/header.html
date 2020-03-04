@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> SMART | WATCH</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+  <!-- Internal css & javascript -->
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <script src="js/default.js"></script>
+</head>
+<style>
+body{
+    font-family: monospace !important;
+}
+    img{
+        vertical-align: middle;
+        border-style: none;
+        padding: 0px;
+        margin:0px;
+    }
+    
+    .background{
+        background-image: url('images/banner.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5%;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: all 200ms linear;
+        background-attachment:fixed;
+        background-position:fixed;
+        background-size: cover;
+    }
+
+    .nav-link{
+        color:white !important;
+        /*font-weight: bold;*/
+        transition: all 200ms linear;
+        font-size: 18px;
+        font-family: monospace;
+
+    }
+    .nav-item:hover .nav-link{
+        color:white !important;
+        font-weight: bold;
+    }
+
+    .nav-item.active .nav-link{
+        color: #777 !important;
+    }
+    .nav-link {
+        position: relative;
+        padding: 5px 0 !important;
+        display: inline-block;
+    }
+    .nav-item:after{
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        content: '';
+        background-color:white;
+        opacity: 0;
+        transition: all 200ms linear;
+    }
+    .nav-item:hover:after{
+        bottom: 0;
+        opacity: 1;
+    }
+    .nav-item.active:hover:after{
+        opacity: 0;
+    }
+    .nav-item{
+        position: relative;
+        transition: all 200ms linear;
+    }
+
+    .start-header.scroll-on {
+        /*box-shadow: 0 5px 10px 0 rgba(241, 246, 249, 0.15);*/
+        padding: 5px 0;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        /*background-color: #2b7ceb;*/
+        /*background-image: url('images/banner.png');*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 3%;
+        background-color: rgb(12, 1, 1);
+        overflow-x: hidden;
+        transition: all 200ms linear;
+        background-attachment:fixed;
+        background-position:fixed;
+        background-size: cover;
+
+    }
+</style>
+<body>
+
+<body class="hero-anime">	
+
+	<div class="navigation-wrap bg-dark start-header start-style">
+		<div class="container">
+			<div class="row" >
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md">
+					
+						<a class="navbar-brand" href="index.html" target="_blank">
+                            <img src="images/logo.png" style="width:205px;height:30px"></a>
+                        </a>	
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="index.jsp">HOME</a>
+								</li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="out_product.html">ABOUT</a>
+								</li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="in_product.html">SERVICE</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="contact.html">CONTACT</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="login.jsp">LOG IN | SIGN UP</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="help.jsp">HELP?</a>
+								</li>
+
+                            </ul>
+						</div>
+						
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
